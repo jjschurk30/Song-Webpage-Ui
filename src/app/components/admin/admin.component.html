@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Artist Name</th>
+      <th>Email</th>
+      <th>Song</th>
+      <th class="text-right">Price</th>
+    </tr>
+    <tr *ngFor="let song of songs">
+      <td>
+        <a [routerLink] = "['/admin/view', song.id]">{{song.artistName}}</a>
+      </td>
+      <td>
+        {{song.artistEmail}}
+      </td>
+      <td>
+        {{song.songName}}
+      </td>
+      <td class="text-right">
+        {{song.price}}
+      </td>
+    </tr>
+  </table>
+</div>
